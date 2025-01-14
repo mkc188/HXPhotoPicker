@@ -129,40 +129,31 @@ open class PhotoBrowserAnimator: NSObject, PhotoBrowserAnimationTransitioning {
                 toVC.previewViewController?.navBgView?.alpha = 1
                 contentView.backgroundColor = backgroundColor.withAlphaComponent(1)
             }
-            UIView.animate(
-                withDuration: 0,
-                delay: 0,
-                usingSpringWithDamping: 0,
-                initialSpringVelocity: 0,
-                options: [.layoutSubviews, .curveEaseOut]
-            ) {
-                toVC.navigationBar.alpha = 1
-                if self.animatedImageView.layer.cornerRadius > 0 {
-                    self.animatedImageView.layer.cornerRadius = 0
-                }
-                self.animatedImageView.frame = toRect
-                toVC.pickerDelegate?
-                    .pickerController(toVC, animateTransition: .present)
-            } completion: { _ in
-                previewView?.isHidden = false
-                toVC.isBrowserTransitioning = false
-                if let requestID = self.requestID {
-                    PHImageManager.default().cancelImageRequest(requestID)
-                    self.requestID = nil
-                }
-                toVC.pickerDelegate?.pickerController(
-                    toVC,
-                    previewPresentComplete: previewIndex
-                )
-                toVC.previewViewController?.view.backgroundColor = backgroundColor.withAlphaComponent(1)
-                toVC.previewViewController?.setCurrentCellImage(image: self.animatedImageView.image)
-                toVC.previewViewController?.collectionView.isHidden = false
-                toVC.previewViewController?.updateColors()
-                toVC.setupBackgroundColor()
-                // self.animatedImageView.removeFromSuperview()
-                contentView.removeFromSuperview()
-                transitionContext.completeTransition(true)
+            toVC.navigationBar.alpha = 1
+            if self.animatedImageView.layer.cornerRadius > 0 {
+                self.animatedImageView.layer.cornerRadius = 0
             }
+            self.animatedImageView.frame = toRect
+            toVC.pickerDelegate?
+                .pickerController(toVC, animateTransition: .present)
+            previewView?.isHidden = false
+            toVC.isBrowserTransitioning = false
+            if let requestID = self.requestID {
+                PHImageManager.default().cancelImageRequest(requestID)
+                self.requestID = nil
+            }
+            toVC.pickerDelegate?.pickerController(
+                toVC,
+                previewPresentComplete: previewIndex
+            )
+            toVC.previewViewController?.view.backgroundColor = backgroundColor.withAlphaComponent(1)
+            toVC.previewViewController?.setCurrentCellImage(image: self.animatedImageView.image)
+            toVC.previewViewController?.collectionView.isHidden = false
+            toVC.previewViewController?.updateColors()
+            toVC.setupBackgroundColor()
+            // self.animatedImageView.removeFromSuperview()
+            contentView.removeFromSuperview()
+            transitionContext.completeTransition(true)
         }
         #if canImport(Kingfisher)
         if let networkImage = photoAsset?.networkImageAsset, networkImage.imageSize.equalTo(.zero) {
