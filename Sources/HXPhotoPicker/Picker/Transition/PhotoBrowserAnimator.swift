@@ -159,7 +159,7 @@ open class PhotoBrowserAnimator: NSObject, PhotoBrowserAnimationTransitioning {
                 toVC.previewViewController?.collectionView.isHidden = false
                 toVC.previewViewController?.updateColors()
                 toVC.setupBackgroundColor()
-                self.animatedImageView.removeFromSuperview()
+                // self.animatedImageView.removeFromSuperview()
                 contentView.removeFromSuperview()
                 transitionContext.completeTransition(true)
             }
