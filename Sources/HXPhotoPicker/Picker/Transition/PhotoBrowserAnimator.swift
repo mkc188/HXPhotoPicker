@@ -130,9 +130,9 @@ open class PhotoBrowserAnimator: NSObject, PhotoBrowserAnimationTransitioning {
                 contentView.backgroundColor = backgroundColor.withAlphaComponent(1)
             }
             UIView.animate(
-                withDuration: duration,
+                withDuration: 0,
                 delay: 0,
-                usingSpringWithDamping: 0.8,
+                usingSpringWithDamping: 0,
                 initialSpringVelocity: 0,
                 options: [.layoutSubviews, .curveEaseOut]
             ) {
