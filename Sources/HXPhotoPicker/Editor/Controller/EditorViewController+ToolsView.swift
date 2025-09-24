@@ -121,7 +121,7 @@ extension EditorViewController: EditorToolsViewDelegate {
         finishButton.isHidden = false
         topMaskView.isHidden = false
         bottomMaskView.isHidden = false
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.1) {
             self.toolsView.alpha = 1
             self.cancelButton.alpha = 1
             self.finishButton.alpha = 1
@@ -168,7 +168,7 @@ extension EditorViewController: EditorToolsViewDelegate {
                 break
             }
         }
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.1) {
             self.toolsView.alpha = 0
             self.cancelButton.alpha = 0
             self.finishButton.alpha = 0
@@ -244,7 +244,7 @@ extension EditorViewController: EditorToolsViewDelegate {
             return
         }
         videoControlView.isHidden = false
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.1) {
             self.videoControlView.alpha = 1
         }
     }
@@ -254,7 +254,7 @@ extension EditorViewController: EditorToolsViewDelegate {
             return
         }
         videoControlView.stopScroll()
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.1) {
             self.videoControlView.alpha = 0
         } completion: {
             if $0 {
@@ -427,7 +427,7 @@ extension EditorViewController: EditorToolsViewDelegate {
         }
         brushColorView.isHidden = false
         brushSizeView.isHidden = false
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.1) {
             self.brushColorView.alpha = 1
             self.brushSizeView.alpha = 1
         }
@@ -437,7 +437,7 @@ extension EditorViewController: EditorToolsViewDelegate {
         if brushColorView.isHidden || brushColorView.alpha == 0 {
             return
         }
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.1) {
             self.brushColorView.alpha = 0
             self.brushSizeView.alpha = 0
         } completion: {
@@ -453,7 +453,7 @@ extension EditorViewController: EditorToolsViewDelegate {
             return
         }
         mosaicToolView.isHidden = false
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.1) {
             self.mosaicToolView.alpha = 1
         }
     }
@@ -462,7 +462,7 @@ extension EditorViewController: EditorToolsViewDelegate {
         if mosaicToolView.isHidden || mosaicToolView.alpha == 0 {
             return
         }
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.1) {
             self.mosaicToolView.alpha = 0
         } completion: {
             if $0 {
@@ -509,7 +509,7 @@ extension EditorViewController: EditorToolsViewDelegate {
                 }
             }
         }
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.1) {
             self.updateMusicViewFrame()
         }
     }
@@ -518,7 +518,7 @@ extension EditorViewController: EditorToolsViewDelegate {
         if musicView.y == view.height {
             return
         }
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.1) {
             self.updateMusicViewFrame()
         }
     }
@@ -528,7 +528,7 @@ extension EditorViewController: EditorToolsViewDelegate {
             return
         }
         filterEditView.isHidden = false
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.1) {
             self.filterEditView.alpha = 1
         }
     }
@@ -537,7 +537,7 @@ extension EditorViewController: EditorToolsViewDelegate {
         if filterEditView.isHidden || filterEditView.alpha == 0 {
             return
         }
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.1) {
             self.filterEditView.alpha = 0
         } completion: {
             if $0 {
@@ -551,7 +551,7 @@ extension EditorViewController: EditorToolsViewDelegate {
             return
         }
         filtersView.isHidden = false
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.1) {
             self.filtersView.alpha = 1
         }
     }
@@ -560,7 +560,7 @@ extension EditorViewController: EditorToolsViewDelegate {
         if filtersView.isHidden || filtersView.alpha == 0 {
             return
         }
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.1) {
             self.filtersView.alpha = 0
         } completion: {
             if $0 {
@@ -591,7 +591,7 @@ extension EditorViewController: EditorToolsViewDelegate {
             maskListButton.isHidden = false
         }
         showScaleSwitchView()
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.1) {
             if !self.config.cropSize.aspectRatios.isEmpty {
                 self.ratioToolView.alpha = 1
             }
@@ -621,7 +621,7 @@ extension EditorViewController: EditorToolsViewDelegate {
         }
         toolsView.isHidden = false
         hideScaleSwitchView()
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.1) {
             if !self.config.cropSize.aspectRatios.isEmpty {
                 self.ratioToolView.alpha = 0
             }
@@ -659,7 +659,7 @@ extension EditorViewController: EditorToolsViewDelegate {
         }else {
             return
         }
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.1) {
             if !self.config.cropSize.aspectRatios.isEmpty {
                 self.scaleSwitchView.alpha = 1
             }
@@ -680,7 +680,7 @@ extension EditorViewController: EditorToolsViewDelegate {
         if isRatioClick {
             maskListButton.isHidden = false
         }
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.1) {
             self.scaleSwitchView.alpha = 0
             if isRatioClick {
                 self.maskListButton.alpha = 1

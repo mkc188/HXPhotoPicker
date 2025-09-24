@@ -138,7 +138,7 @@ class PhotoPreviewSelectedView: UIView,
         if beforeIsEmpty {
             alpha = 0
             isHidden = false
-            UIView.animate(withDuration: 0.25) {
+            UIView.animate(withDuration: 0.15) {
                 self.alpha = 1
                 animations?()
             }
@@ -174,7 +174,7 @@ class PhotoPreviewSelectedView: UIView,
             collectionView.reloadData()
         }
         if !beforeIsEmpty && photoAssetArray.isEmpty {
-            UIView.animate(withDuration: 0.25) {
+            UIView.animate(withDuration: 0.15) {
                 self.alpha = 0
                 animations?()
             } completion: { (isFinish) in

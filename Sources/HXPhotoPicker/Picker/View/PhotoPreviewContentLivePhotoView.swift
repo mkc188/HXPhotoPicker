@@ -102,7 +102,7 @@ extension PhotoPreviewContentLivePhotoView {
             if asset == self.photoAsset {
                 self.requestSucceed()
                 self.livePhotoView.livePhoto = livePhoto
-                UIView.animate(withDuration: 0.25) {
+                UIView.animate(withDuration: 0.15) {
                     self.livePhotoView.alpha = 1
                 }
                 if self.livePhotoPlayType == .auto ||
@@ -143,7 +143,7 @@ extension PhotoPreviewContentLivePhotoView {
             if photoAsset == self.photoAsset {
                 self.requestSucceed()
                 self.livePhotoView.livePhoto = livePhoto
-                UIView.animate(withDuration: 0.25) {
+                UIView.animate(withDuration: 0.15) {
                     self.livePhotoView.alpha = 1
                 }
                 if self.livePhotoPlayType == .auto ||

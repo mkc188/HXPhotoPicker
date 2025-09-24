@@ -225,7 +225,7 @@ public class EditorChartletViewController: HXBaseViewController, EditorChartletL
             ) as? EditorChartletViewCell {
                 cell.showSelectedBgView = false
             }
-            UIView.animate(withDuration: 0.2) {
+            UIView.animate(withDuration: 0.1) {
                 self.previewView?.alpha = 0
             } completion: { _ in
                 self.previewView?.removeFromSuperview()

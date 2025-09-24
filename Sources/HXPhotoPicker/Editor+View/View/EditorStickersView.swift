@@ -497,7 +497,7 @@ class EditorStickersView: UIView, EditorStickersItemViewDelegate {
         trashViewDidRemove = false
         trashViewIsVisible = true
         let viewSize = UIDevice.screenSize
-        UIView.animate(withDuration: 0.25) {
+        UIView.animate(withDuration: 0.15) {
             self.trashView.centerX = viewSize.width * 0.5
             self.trashView.y = viewSize.height - UIDevice.bottomMargin - 20 - self.trashView.height
             self.trashView.alpha = 1
@@ -517,7 +517,7 @@ class EditorStickersView: UIView, EditorStickersItemViewDelegate {
         trashViewIsVisible = false
         trashViewDidRemove = true
         let viewSize = UIDevice.screenSize
-        UIView.animate(withDuration: 0.25) {
+        UIView.animate(withDuration: 0.15) {
             self.trashView.centerX = viewSize.width * 0.5
             self.trashView.y = viewSize.height
             self.trashView.alpha = 0
@@ -618,7 +618,7 @@ class EditorStickersView: UIView, EditorStickersItemViewDelegate {
         if trashView.frame.contains(point) && !trashViewDidRemove {
             trashView.inArea = true
             if !hasImpactFeedback {
-                UIView.animate(withDuration: 0.25) {
+                UIView.animate(withDuration: 0.15) {
                     self.selectView?.alpha = 0.4
                 }
                 perform(#selector(hideTrashView), with: nil, afterDelay: 1.2)
@@ -633,7 +633,7 @@ class EditorStickersView: UIView, EditorStickersItemViewDelegate {
                 hasImpactFeedback = true
             }
         }else {
-            UIView.animate(withDuration: 0.2) {
+            UIView.animate(withDuration: 0.1) {
                 self.selectView?.alpha = 1
             }
             UIView.cancelPreviousPerformRequests(withTarget: self)
@@ -661,7 +661,7 @@ class EditorStickersView: UIView, EditorStickersItemViewDelegate {
             trashView.inArea = false
             itemView.isDelete = true
             itemView.isEnabled = false
-            UIView.animate(withDuration: 0.25) {
+            UIView.animate(withDuration: 0.15) {
                 itemView.alpha = 0
             } completion: { _ in
                 itemView.removeFromSuperview()

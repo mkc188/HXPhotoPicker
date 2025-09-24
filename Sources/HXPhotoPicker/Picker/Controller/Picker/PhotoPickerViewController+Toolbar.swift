@@ -39,7 +39,7 @@ extension PhotoPickerViewController: PhotoToolBarDelegate {
     
     func updateToolbarFrame() {
         if photoToolbar.viewHeight != photoToolbar.height {
-            UIView.animate(withDuration: 0.25) {
+            UIView.animate(withDuration: 0.15) {
                 self.layoutToolbar()
                 self.photoToolbar.layoutSubviews()
             }

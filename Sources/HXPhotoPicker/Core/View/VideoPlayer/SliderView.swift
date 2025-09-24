@@ -150,7 +150,7 @@ class SliderView: UIView {
                 return
             }
             if style == .editor {
-                UIView.animate(withDuration: 0.2) {
+                UIView.animate(withDuration: 0.1) {
                     self.thumbView.transform = .identity
                 }
             }
@@ -179,7 +179,7 @@ class SliderView: UIView {
             delegate?.sliderView(self, didChangedValue: value, state: .touchUpInSide)
             delegate?.sliderView(self, didChangedAt: convert(thumbView.frame, to: superview), state: .touchUpInSide)
             if style == .editor {
-                UIView.animate(withDuration: 0.2) {
+                UIView.animate(withDuration: 0.1) {
                     self.thumbView.transform = .init(scaleX: self.thumbScale, y: self.thumbScale)
                 }
             }

@@ -161,13 +161,13 @@ extension EditorViewController: EditorFiltersViewDelegate {
     func showFilterParameterView() {
         filtersView.reloadData()
         isShowFilterParameter = true
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.1) {
             self.updateFilterParameterViewFrame()
         }
     }
     func hideFilterParameterView() {
         isShowFilterParameter = false
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.1) {
             self.updateFilterParameterViewFrame()
         }
     }

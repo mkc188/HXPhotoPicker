@@ -303,7 +303,7 @@ class EditorContentView: UIView {
         if stickerView.alpha == 1 {
             return
         }
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.1) {
             self.stickerView.alpha = 1
         }
     }
@@ -312,7 +312,7 @@ class EditorContentView: UIView {
         if stickerView.alpha == 0 {
             return
         }
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.1) {
             self.stickerView.alpha = 0
         }
     }

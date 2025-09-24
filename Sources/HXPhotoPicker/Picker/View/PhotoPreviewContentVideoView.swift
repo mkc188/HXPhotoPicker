@@ -130,7 +130,7 @@ extension PhotoPreviewContentVideoView {
                     return
                 }
                 self.videoView.avAsset = avAsset
-                UIView.animate(withDuration: 0.25) {
+                UIView.animate(withDuration: 0.15) {
                     self.videoView.alpha = 1
                 }
                 self.requestID = nil
@@ -226,7 +226,7 @@ extension PhotoPreviewContentVideoView {
         }
         requestNetworkCompletion = true
         videoView.avAsset = AVURLAsset(url: videoURL, options: options)
-        UIView.animate(withDuration: 0.25) {
+        UIView.animate(withDuration: 0.15) {
             self.videoView.alpha = 1
         }
     }

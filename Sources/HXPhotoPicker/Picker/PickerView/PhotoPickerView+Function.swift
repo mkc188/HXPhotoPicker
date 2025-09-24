@@ -406,7 +406,7 @@ extension PhotoPickerView {
                     dragView.removeFromSuperview()
                     return
                 }
-                UIView.animate(withDuration: 0.25) {
+                UIView.animate(withDuration: 0.15) {
                     self.dragView.frame = self.initialDragRect
                 } completion: { _ in
                     if pan.state == .began || pan.state == .changed {

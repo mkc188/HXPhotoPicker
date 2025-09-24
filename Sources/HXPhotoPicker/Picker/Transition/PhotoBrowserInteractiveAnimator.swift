@@ -250,7 +250,7 @@ public class PhotoBrowserInteractiveAnimator: PhotoBrowserInteractiveTransition,
         previewViewController.navigationController?.view.isUserInteractionEnabled = false
         let toVC = self.transitionContext?.viewController(forKey: .to) as? PhotoPickerViewController
         let picker = self.pickerController
-        UIView.animate(withDuration: 0.25) {
+        UIView.animate(withDuration: 0.15) {
             previewView.transform = .identity
             previewView.center = self.previewCenter
             self.backgroundView.alpha = 1
@@ -353,7 +353,7 @@ public class PhotoBrowserInteractiveAnimator: PhotoBrowserInteractiveTransition,
                 pickerController,
                 previewDismissComplete: pickerController.currentPreviewIndex
             )
-            UIView.animate(withDuration: 0.2) {
+            UIView.animate(withDuration: 0.1) {
                 previewView.alpha = 0
             } completion: { _ in
                 previewView.isUserInteractionEnabled = true

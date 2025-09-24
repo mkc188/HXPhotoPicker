@@ -159,11 +159,11 @@ public class VideoPlaySliderView: UIView, SliderViewDelegate {
         switch state {
         case .touchDown:
             if width >= 50 && width < 130 {
-                UIView.animate(withDuration: 0.2) {
+                UIView.animate(withDuration: 0.1) {
                     self.currentTimeLb.alpha = 1
                 }
             }else if width >= 130 {
-                UIView.animate(withDuration: 0.2) {
+                UIView.animate(withDuration: 0.1) {
                     self.currentTimeLb.alpha = 1
                     self.totalTimeLb.alpha = 1
                 }
@@ -171,7 +171,7 @@ public class VideoPlaySliderView: UIView, SliderViewDelegate {
         case .changed:
             break
         case .touchUpInSide:
-            UIView.animate(withDuration: 0.2) {
+            UIView.animate(withDuration: 0.1) {
                 self.currentTimeLb.alpha = 0
                 self.totalTimeLb.alpha = 0
             }
@@ -183,14 +183,14 @@ public class VideoPlaySliderView: UIView, SliderViewDelegate {
         if rect.minX < currentTimeLb.frame.maxX {
             let timeY: CGFloat = rect.minY - currentTimeLb.height
             if currentTimeLb.y != timeY {
-                UIView.animate(withDuration: 0.2) {
+                UIView.animate(withDuration: 0.1) {
                     self.currentTimeLb.y = timeY
                 }
             }
         }else {
             let timeY: CGFloat = height * 0.5 - currentTimeLb.height
             if currentTimeLb.y != timeY {
-                UIView.animate(withDuration: 0.2) {
+                UIView.animate(withDuration: 0.1) {
                     self.currentTimeLb.y = timeY
                 }
             }
@@ -199,14 +199,14 @@ public class VideoPlaySliderView: UIView, SliderViewDelegate {
             if rect.maxX > totalTimeLb.x {
                 let timeY: CGFloat = rect.minY - totalTimeLb.height
                 if totalTimeLb.y != timeY {
-                    UIView.animate(withDuration: 0.2) {
+                    UIView.animate(withDuration: 0.1) {
                         self.totalTimeLb.y = timeY
                     }
                 }
             }else {
                 let timeY: CGFloat = height * 0.5 - totalTimeLb.height
                 if totalTimeLb.y != timeY {
-                    UIView.animate(withDuration: 0.2) {
+                    UIView.animate(withDuration: 0.1) {
                         self.totalTimeLb.y = timeY
                     }
                 }

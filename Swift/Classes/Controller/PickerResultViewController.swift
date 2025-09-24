@@ -337,7 +337,7 @@ class PickerResultViewController: UIViewController,
         if beforeRowCount == rowCount {
             return
         }
-        UIView.animate(withDuration: 0.25) {
+        UIView.animate(withDuration: 0.15) {
             self.configCollectionViewHeight()
             self.view.layoutIfNeeded()
         }

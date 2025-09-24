@@ -153,7 +153,7 @@ class CameraBottomView: UIView {
             takeMaskLayer.removeAllAnimations()
             takeMaskLayer.isHidden = true
         }else {
-            UIView.animate(withDuration: 0.2) {
+            UIView.animate(withDuration: 0.1) {
                 self.videoTimeLb.alpha = 0
                 self.typeView.alpha = 1
             } completion: { _ in
@@ -163,7 +163,7 @@ class CameraBottomView: UIView {
         if !isRecording { return }
         isRecording = false
         delegate?.bottomView(endRecording: self)
-        UIView.animate(withDuration: 0.25) {
+        UIView.animate(withDuration: 0.15) {
             self.takeBgView.transform = .identity
             self.takeView.transform = .identity
             self.takeView.backgroundColor = .white
@@ -176,7 +176,7 @@ class CameraBottomView: UIView {
     }
     func startTakeMaskLayerPath(duration: TimeInterval) {
         if takePhotoMode == .click {
-            UIView.animate(withDuration: 0.2) {
+            UIView.animate(withDuration: 0.1) {
                 self.typeView.alpha = 0
                 self.videoTimeLb.alpha = 1
             }
@@ -379,7 +379,7 @@ extension CameraBottomView {
                 isRecording = true
                 backButton.isUserInteractionEnabled = false
                 delegate?.bottomView(longPressDidBegan: self)
-                UIView.animate(withDuration: 0.25) {
+                UIView.animate(withDuration: 0.15) {
                     self.takeView.backgroundColor = self.color
                     self.takeView.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
                 } completion: { _ in
@@ -422,7 +422,7 @@ extension CameraBottomView {
             isRecording = true
             backButton.isUserInteractionEnabled = false
             delegate?.bottomView(longPressDidBegan: self)
-            UIView.animate(withDuration: 0.25) {
+            UIView.animate(withDuration: 0.15) {
                 self.takeBgView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
                 self.takeView.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
             } completion: { _ in

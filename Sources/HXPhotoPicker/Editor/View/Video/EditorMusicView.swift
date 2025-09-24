@@ -256,7 +256,7 @@ class EditorMusicView: UIView {
             backgroundButton.isHidden = false
             showLyricButton.isHidden = false
         }
-        UIView.animate(withDuration: 0.25) {
+        UIView.animate(withDuration: 0.15) {
             self.backgroundButton.alpha = infos.isEmpty ? 0 : 1
             self.showLyricButton.alpha = infos.isEmpty ? 0 : 1
             self.setBottomButtonFrame()

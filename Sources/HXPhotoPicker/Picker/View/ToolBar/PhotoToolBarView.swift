@@ -358,7 +358,7 @@ public class PhotoToolBarView: UIToolbar, PhotoToolBar {
     
     public func deviceOrientationDidChanged() {
         if !isShowSelectedView { return }
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.1) {
             self.selectedView.reloadSectionInset()
         }
     }

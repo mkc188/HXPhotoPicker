@@ -497,14 +497,14 @@ extension EditorVideoControlView {
         if currentLineView.alpha == 1 {
             return
         }
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.1) {
             self.currentLineView.alpha = 1
             self.currentTimeView.alpha = 1
         }
     }
     
     func hideCurrentTime() {
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.1) {
             self.currentLineView.alpha = 0
             self.currentTimeView.alpha = 0
         }
@@ -539,7 +539,7 @@ extension EditorVideoControlView {
         if progressLineView.alpha == 1 {
             return
         }
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.1) {
             self.progressLineView.alpha = 1
         }
     }
@@ -551,7 +551,7 @@ extension EditorVideoControlView {
         if progressLineView.alpha == 0 {
             return
         }
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.1) {
             self.progressLineView.alpha = 0
         }
     }
@@ -686,7 +686,7 @@ extension EditorVideoControlView {
         if startLineView.alpha == 1 {
             return
         }
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.1) {
             self.startLineView.alpha = 1
             self.startTimeView.alpha = 1
             self.endLineView.alpha = 1
@@ -700,7 +700,7 @@ extension EditorVideoControlView {
         if isDelay {
             timeLabelsTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { [weak self] _ in
                 guard let self = self else { return }
-                UIView.animate(withDuration: 0.2) {
+                UIView.animate(withDuration: 0.1) {
                     self.startLineView.alpha = 0
                     self.startTimeView.alpha = 0
                     self.endLineView.alpha = 0
@@ -712,7 +712,7 @@ extension EditorVideoControlView {
             if startLineView.alpha == 0 {
                 return
             }
-            UIView.animate(withDuration: 0.2) {
+            UIView.animate(withDuration: 0.1) {
                 self.startLineView.alpha = 0
                 self.startTimeView.alpha = 0
                 self.endLineView.alpha = 0

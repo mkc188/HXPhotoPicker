@@ -78,7 +78,7 @@ extension PhotoPickerViewController: PhotoAlbumListDelegate {
         albumBackgroudView.alpha = 0
         albumBackgroudView.isHidden = false
         albumView.scrollSelectToMiddle()
-        UIView.animate(withDuration: 0.25) {
+        UIView.animate(withDuration: 0.15) {
             self.albumBackgroudView.alpha = 1
             self.updateAlbumViewFrame()
         }
@@ -86,7 +86,7 @@ extension PhotoPickerViewController: PhotoAlbumListDelegate {
     
     func closeAlbumView() {
         listView.view.isUserInteractionEnabled = true
-        UIView.animate(withDuration: 0.25) {
+        UIView.animate(withDuration: 0.15) {
             self.albumBackgroudView.alpha = 0
             self.updateAlbumViewFrame()
         } completion: { _ in

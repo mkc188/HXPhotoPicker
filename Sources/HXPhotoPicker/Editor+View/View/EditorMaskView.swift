@@ -500,7 +500,7 @@ extension EditorMaskView {
         switch type {
         case .frame:
             if animated {
-                UIView.animate(withDuration: 0.2) {
+                UIView.animate(withDuration: 0.1) {
                     self.frameView.alpha = 0
                 }
             }else {
@@ -517,7 +517,7 @@ extension EditorMaskView {
         switch type {
         case .frame:
             if animated {
-                UIView.animate(withDuration: 0.2) {
+                UIView.animate(withDuration: 0.1) {
                     self.frameView.alpha = 1
                 }
             }else {

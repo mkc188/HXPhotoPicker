@@ -220,7 +220,7 @@ class WindowPickerViewController: UIViewController {
             pickerView.fetchAsset()
         }
         resetOriginal()
-        UIView.animate(withDuration: 0.25) {
+        UIView.animate(withDuration: 0.15) {
             if self.showPicker {
                 self.pickerView.y = pickerViewY
                 self.toolbar.y = self.pickerView.y - 50
@@ -285,7 +285,7 @@ class WindowPickerViewController: UIViewController {
             scrollDirection = .horizontal
             pickerView.manager.config.photoList.cell.targetWidth = 300
         }
-        UIView.animate(withDuration: 0.25) {
+        UIView.animate(withDuration: 0.15) {
             self.pickerView.height = self.pickerViewHeight
             self.pickerView.y = self.view.height - self.pickerViewHeight - self.bottomView.height
             self.toolbar.y = self.pickerView.y - 50
@@ -401,7 +401,7 @@ extension WindowPickerViewController: PhotoPickerViewDelegate {
         beginDragPoint = gestureRecognizer.location(in: keyWindow)
         sendBgView.frame = CGRect(x: 0, y: 0, width: view.width, height: pickerView.y - 50)
         sendBlurView.frame = sendBgView.bounds
-        UIView.animate(withDuration: 0.25) {
+        UIView.animate(withDuration: 0.15) {
             self.sendBlurView.effect = UIBlurEffect(style: .light)
             self.sendBlurView.viewWithTag(1)?.alpha = 1
         }
@@ -439,7 +439,7 @@ extension WindowPickerViewController: PhotoPickerViewDelegate {
         gestureRecognizer: UIPanGestureRecognizer,
         endDrag photoAsset: PhotoAsset
     ) -> Bool {
-        UIView.animate(withDuration: 0.25) {
+        UIView.animate(withDuration: 0.15) {
             self.sendBgView.backgroundColor = UIColor(hexString: "#87CEFA").withAlphaComponent(0)
             self.sendTitleLb.alpha = 0
             self.sendBlurView.effect = nil

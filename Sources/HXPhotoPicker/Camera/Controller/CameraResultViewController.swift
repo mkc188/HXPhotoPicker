@@ -90,12 +90,12 @@ class CameraResultViewController: UIViewController {
     private func didViewClick() {
         if doneButton.alpha == 1 {
             navigationController?.setNavigationBarHidden(true, animated: true)
-            UIView.animate(withDuration: 0.25) {
+            UIView.animate(withDuration: 0.15) {
                 self.doneButton.alpha = 0
             }
         }else {
             navigationController?.setNavigationBarHidden(false, animated: true)
-            UIView.animate(withDuration: 0.25) {
+            UIView.animate(withDuration: 0.15) {
                 self.doneButton.alpha = 1
             }
         }

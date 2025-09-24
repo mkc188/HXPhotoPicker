@@ -128,14 +128,14 @@ extension EditorViewController: EditorMusicViewDelegate {
     }
     func showVolumeView() {
         isShowVolume = true
-        UIView.animate(withDuration: 0.25) {
+        UIView.animate(withDuration: 0.15) {
             self.updateVolumeViewFrame()
             self.musicView.alpha = 0
         }
     }
     func hideVolumeView() {
         isShowVolume = false
-        UIView.animate(withDuration: 0.25) {
+        UIView.animate(withDuration: 0.15) {
             self.updateVolumeViewFrame()
             self.musicView.alpha = 1
         }

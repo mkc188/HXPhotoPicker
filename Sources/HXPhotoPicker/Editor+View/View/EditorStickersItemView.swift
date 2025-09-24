@@ -246,7 +246,7 @@ class EditorStickersItemView: EditorStickersItemBaseView {
             if let moveToCenter = moveToCenter,
                 let itemCenter = itemCenter,
                moveToCenter {
-                UIView.animate(withDuration: 0.25) {
+                UIView.animate(withDuration: 0.15) {
                     self.center = itemCenter
                 }
             }
@@ -311,7 +311,7 @@ class EditorStickersItemView: EditorStickersItemBaseView {
                 let itemCenter = itemCenter,
                moveToCenter,
                !isDelete {
-                UIView.animate(withDuration: 0.25) {
+                UIView.animate(withDuration: 0.15) {
                     self.center = itemCenter
                 }
             }

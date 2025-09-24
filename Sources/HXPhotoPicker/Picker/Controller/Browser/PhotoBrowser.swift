@@ -590,7 +590,7 @@ extension PhotoBrowser: PhotoPickerControllerDelegate {
             pickerController.dismiss(animated: true, completion: nil)
         }else {
             didHidden = !didHidden
-            UIView.animate(withDuration: 0.25) {
+            UIView.animate(withDuration: 0.15) {
                 self.pageIndicator?.alpha =  self.didHidden ? 0 : 1
                 self.gradualShadowImageView.alpha = self.didHidden ? 0 : 1
             } completion: { _ in

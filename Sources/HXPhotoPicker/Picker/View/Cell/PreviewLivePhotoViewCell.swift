@@ -144,7 +144,7 @@ class PreviewLivePhotoViewCell: PhotoPreviewViewCell, PhotoPreviewContentViewDel
         }
         if !liveMarkView.isHidden && liveMarkView.alpha == 1 { return }
         liveMarkView.isHidden = false
-        UIView.animate(withDuration: 0.25) {
+        UIView.animate(withDuration: 0.15) {
             self.liveMarkView.alpha = 1
         }
     }
@@ -176,7 +176,7 @@ class PreviewLivePhotoViewCell: PhotoPreviewViewCell, PhotoPreviewContentViewDel
             return
         }
         if liveMarkView.isHidden { return }
-        UIView.animate(withDuration: 0.25) {
+        UIView.animate(withDuration: 0.15) {
             self.liveMarkView.alpha = 0
         } completion: { _ in
             if self.liveMarkView.alpha == 0 {

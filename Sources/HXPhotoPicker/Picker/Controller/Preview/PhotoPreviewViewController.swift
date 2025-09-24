@@ -636,7 +636,7 @@ extension PhotoPreviewViewController {
             photoToolbar.requestOriginalAssetBtyes()
             photoToolbar.selectedAssetDidChanged(pickerController.selectedAssetArray)
             if pickerController.selectedAssetArray.isEmpty {
-                UIView.animate(withDuration: 0.25) {
+                UIView.animate(withDuration: 0.15) {
                     self.configBottomViewFrame()
                     self.photoToolbar.layoutSubviews()
                 }

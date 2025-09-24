@@ -48,7 +48,7 @@ extension EditorViewController: EditorBrushColorViewDelegate {
         brushBlockView.center = CGPoint(x: self.view.width * 0.5, y: self.view.height * 0.5)
         brushBlockView.alpha = 0
         view.addSubview(brushBlockView)
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.1) {
             self.brushBlockView.alpha = 1
         }
     }
@@ -58,7 +58,7 @@ extension EditorViewController: EditorBrushColorViewDelegate {
         if brushBlockView.superview != view {
             return
         }
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.1) {
             self.brushBlockView.alpha = 0
         } completion: {
             if !$0 {

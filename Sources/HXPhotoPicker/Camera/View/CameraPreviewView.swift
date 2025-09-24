@@ -144,7 +144,7 @@ class CameraPreviewView: UIView {
         filterNameLb.isHidden = false
         filterNameLb.alpha = 0
         filterNameLb.centerX = !isRight ? width * 0.5 + 50 :  width * 0.5 - 50
-        UIView.animate(withDuration: 0.25) {
+        UIView.animate(withDuration: 0.15) {
             self.filterNameLb.alpha = 1
             self.filterNameLb.centerX = self.width * 0.5
         } completion: { isFinished in

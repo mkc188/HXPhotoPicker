@@ -105,7 +105,7 @@ extension PhotoPreviewViewController {
     ) {
         if isShowToolbar {
             if bottomNeedAnimated {
-                UIView.animate(withDuration: 0.25) {
+                UIView.animate(withDuration: 0.15) {
                     self.configBottomViewFrame()
                     self.photoToolbar.layoutSubviews()
                 }

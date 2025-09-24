@@ -366,7 +366,7 @@ extension EditorScaleView: UICollectionViewDataSource, UICollectionViewDelegate,
             isAngleChange = true
             state = .begin
         }
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.1) {
             self.centerLineView.backgroundColor = self.themeColor
         }
         centerCell?.showPoint()
@@ -396,7 +396,7 @@ extension EditorScaleView: UICollectionViewDataSource, UICollectionViewDelegate,
             collectionView.isCenter = false
         }
         angleChanged?(angle, state)
-        UIView.animate(withDuration: 0.25) {
+        UIView.animate(withDuration: 0.15) {
             self.centerLineView.backgroundColor = .white
         }
         if currentIndex == centerIndex {
@@ -460,7 +460,7 @@ class EditorScaleViewCell: UICollectionViewCell {
             pointView.alpha = 1
             return
         }
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.1) {
             self.pointView.alpha = 1
         }
     }
@@ -470,7 +470,7 @@ class EditorScaleViewCell: UICollectionViewCell {
             pointView.alpha = 0
             return
         }
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.1) {
             self.pointView.alpha = 0
         }
     }

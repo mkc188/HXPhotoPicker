@@ -205,7 +205,7 @@ extension PhotoPreviewViewController: PhotoPreviewViewCellDelegate {
             }
         }
         if isShowToolbar {
-            UIView.animate(withDuration: 0.25) {
+            UIView.animate(withDuration: 0.15) {
                 self.photoToolbar.alpha = self.statusBarShouldBeHidden ? 0 : 1
             } completion: {
                 if $0 {
@@ -214,7 +214,7 @@ extension PhotoPreviewViewController: PhotoPreviewViewCellDelegate {
             }
         }
 
-        UIView.animate(withDuration: 0.25) {
+        UIView.animate(withDuration: 0.15) {
             self.navBgView?.alpha = self.statusBarShouldBeHidden ? 0 : 1
             self.updateColors()
         } completion: {

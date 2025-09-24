@@ -208,7 +208,7 @@ class EditorVideoControlMaskView: UIView {
     
     func updateFrameView() {
         if rightControl.x - leftControl.frame.maxX < width - controlWidth * 2 || isShowFrame {
-            UIView.animate(withDuration: 0.2) {
+            UIView.animate(withDuration: 0.1) {
                 self.topView.backgroundColor = self.frameHighlightedColor
                 self.bottomView.backgroundColor = self.frameHighlightedColor
                 self.leftControl.backgroundColor = self.frameHighlightedColor
@@ -218,7 +218,7 @@ class EditorVideoControlMaskView: UIView {
                 self.mask_View.backgroundColor = .black.withAlphaComponent(0.5)
             }
         }else {
-            UIView.animate(withDuration: 0.2) {
+            UIView.animate(withDuration: 0.1) {
                 self.topView.backgroundColor = .clear
                 self.bottomView.backgroundColor = .clear
                 self.leftControl.backgroundColor = .clear

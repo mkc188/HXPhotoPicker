@@ -235,7 +235,7 @@ final class ProgressHUD: UIView {
     
     private func hideViews(animated: Bool) {
         if animated {
-            UIView.animate(withDuration: 0.2) {
+            UIView.animate(withDuration: 0.1) {
                 self.backgroundView.alpha = 0
                 self.backgroundView.transform = .init(scaleX: 0.8, y: 0.8)
             } completion: { _ in

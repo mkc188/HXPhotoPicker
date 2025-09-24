@@ -39,7 +39,7 @@ public class PhotoAlbumCollectionViewCell: UICollectionViewCell {
                 selectedBgView.alpha = 1
                 selectedBgView.isHidden = false
             }else {
-                UIView.animate(withDuration: 0.2) {
+                UIView.animate(withDuration: 0.1) {
                     self.selectedBgView.alpha = 0
                 } completion: {
                     if $0 {

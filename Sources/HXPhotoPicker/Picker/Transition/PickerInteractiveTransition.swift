@@ -245,7 +245,7 @@ class PickerInteractiveTransition: UIPercentDrivenInteractiveTransition, UIGestu
         panGestureRecognizer.isEnabled = false
         previewViewController.navigationController?.view.isUserInteractionEnabled = false
         let toVC = transitionContext?.viewController(forKey: .to) as? PhotoPickerViewController
-        UIView.animate(withDuration: 0.25) {
+        UIView.animate(withDuration: 0.15) {
             previewView.transform = .identity
             previewView.center = self.previewCenter
             self.backgroundView.alpha = 1
@@ -400,7 +400,7 @@ class PickerInteractiveTransition: UIPercentDrivenInteractiveTransition, UIGestu
             previewViewController.photoToolbar.mask = nil
             toVC?.photoToolbar.mask = nil
             self.toView?.isHidden = false
-            UIView.animate(withDuration: 0.2) {
+            UIView.animate(withDuration: 0.1) {
                 previewView.alpha = 0
             } completion: { _ in
                 previewView.isUserInteractionEnabled = true
@@ -429,7 +429,7 @@ class PickerInteractiveTransition: UIPercentDrivenInteractiveTransition, UIGestu
             canInteration = false
             beganInterPercent = false
             self.cancel()
-            UIView.animate(withDuration: 0.25) {
+            UIView.animate(withDuration: 0.15) {
                 if !previewViewController.statusBarShouldBeHidden {
                     previewViewController.photoToolbar.alpha = 1
                     previewViewController.navBgView?.alpha = 1

@@ -34,7 +34,7 @@ public class AlbumTitleView: UIControl, PhotoPickerNavigationTitle {
             if !isPopupAlbum {
                 return
             }
-            UIView.animate(withDuration: 0.25) {
+            UIView.animate(withDuration: 0.15) {
                 if self.isSelected {
                     self.arrowView.transform = .init(rotationAngle: .pi)
                 }else {
@@ -141,7 +141,7 @@ public class AlbumTitleView: UIControl, PhotoPickerNavigationTitle {
     
     func updateTitleFrame() {
         let titleWidth = isPopupAlbum ? width - 40 : width
-        UIView.animate(withDuration: 0.25) {
+        UIView.animate(withDuration: 0.15) {
             self.titleLb.width = titleWidth
             if self.isPopupAlbum {
                 self.titleLb.x = 10
