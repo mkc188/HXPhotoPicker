@@ -26,9 +26,9 @@ open class PhotoBrowserAnimator: NSObject, PhotoBrowserAnimationTransitioning {
     
     open func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         if type == .dismiss {
-            return 0.65
+            return 0.25
         }
-        return 0.5
+        return 0.2
     }
     
     open func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
@@ -122,7 +122,7 @@ open class PhotoBrowserAnimator: NSObject, PhotoBrowserAnimationTransitioning {
         }
         func animateHandler() {
             let duration = transitionDuration(using: transitionContext)
-            let colorDuration = duration - 0.15
+            let colorDuration = duration - 0.05
             let colorDelay: TimeInterval = 0.05
             UIView.animate(withDuration: colorDuration, delay: colorDelay, options: [ .curveLinear]) {
                 toVC.previewViewController?.photoToolbar.alpha = 1
@@ -304,11 +304,11 @@ open class PhotoBrowserAnimator: NSObject, PhotoBrowserAnimationTransitioning {
         contentView.addSubview(fromView)
         let duration: TimeInterval
         if !toRect.isEmpty {
-            duration = transitionDuration(using: transitionContext) - 0.2
+            duration = transitionDuration(using: transitionContext) - 0.1
         }else {
             duration = transitionDuration(using: transitionContext)
         }
-        let colorDuration = duration - 0.15
+        let colorDuration = duration - 0.05
         UIView.animate(withDuration: colorDuration, delay: 0, options: [ .curveLinear]) {
             fromVC.previewViewController?.photoToolbar.alpha = 0
             fromVC.previewViewController?.navBgView?.alpha = 0
@@ -344,7 +344,7 @@ open class PhotoBrowserAnimator: NSObject, PhotoBrowserAnimationTransitioning {
                 contentView.removeFromSuperview()
                 transitionContext.completeTransition(true)
             }else {
-                UIView.animate(withDuration: 0.2, delay: 0, options: [.allowUserInteraction]) {
+                UIView.animate(withDuration: 0.1, delay: 0, options: [.allowUserInteraction]) {
                     fromView.alpha = 0
                 } completion: { _ in
                     contentView.removeFromSuperview()
